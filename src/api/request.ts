@@ -16,7 +16,7 @@ const putSubInfo = (store: KVNamespace, a: number[]) => {
     )
 }
 
-const fetchRaw = async (url: string, type: UAs = UAs.BROWSER) => {
+const fetchRaw = async (url: string, type: UAs = UAs.RAW) => {
     try {
         const resp = await fetch(url, { headers: { 'user-agent': type } })
         if (!resp.ok) throw new Error(resp.statusText)
